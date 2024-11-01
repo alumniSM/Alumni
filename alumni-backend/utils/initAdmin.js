@@ -16,14 +16,14 @@ export const initializeAdmin = async () => {
 
     // Create admin user
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = bcrypt.hash(process.env.ADMIN_PASSWORD, salt);
+    const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, salt);
 
     const admin = new User({
       first_name: "Admin",
       last_name: "DBU",
       email: process.env.ADMIN_EMAIL,
       password: hashedPassword,
-      department: "Administration",
+      department: "Information Technology",
       isAdmin: true,
       isVerified: true,
       tempDocument: "Not required for admin",

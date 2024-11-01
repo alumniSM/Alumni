@@ -30,11 +30,11 @@ if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
-// Connect to MongoDB
+// Connect to MongoDB Atlas
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log("Connected to MongoDB");
+    console.log("Connected to MongoDB Atlas");
     return initializeAdmin();
   })
   .then(() => {
