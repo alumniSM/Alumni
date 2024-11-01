@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://alumni-backend-zwtv.onrender.com", // adjust this to your backend URL
+  baseURL: "https://alumni-backend-e383.onrender.com", // adjust this to your backend URL
 });
 
 api.interceptors.request.use(
